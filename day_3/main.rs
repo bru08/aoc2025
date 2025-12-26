@@ -26,6 +26,8 @@ fn max_joltage_parametrized(battery_bank_config: String, usable_batteries: u32) 
     /* Greedy function that select the <usable_batteries> that get the highest final number.
     Its greedy as starting from the most relevant digit, in each round, it search in the window of available positions
     (battery_length - usable_batteries + already_selected_batteries + 1).
+    This greedy function is also an optimal solution, as each selection of a digit in the available space
+    is optimal by selecting the maximum value. As the constraint is to use exactly "<usable batteries>" instead of "at most <usable_batteries>"
 
     Example:
     battery_config: 132451 usable batteries: 3
