@@ -24,6 +24,9 @@ impl JBox {
 
 
 fn count_size(components: &Vec<usize>, top_k: usize) -> usize {
+    // components is a vector that represent the component_id for each element
+    // the function count size of each component, sort in descending order
+    // then return the product of the first top_k component by sizes.
     let mut component_sizes: HashMap<usize, usize> = HashMap::new();
     for &comp_id in components.iter() {
         *component_sizes.entry(comp_id).or_insert(0) += 1;
