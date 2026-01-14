@@ -1,2 +1,4 @@
 main
 *.txt
+*.py
+target
